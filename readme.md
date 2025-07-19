@@ -223,6 +223,8 @@ ecommerce_app/
         "limit": 10
     }
 }
+Take a visual of backend operation  (NOTE : Its not a fully designed frontend for the project. Just to explore all operations of backend more clearly...)
+https://e-comm-frontend-topaz.vercel.app
 ```
 
 - **Status**: `200 OK`
