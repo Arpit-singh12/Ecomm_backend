@@ -3,4 +3,4 @@ uvicorn[standard]
 motor
 python-dotenv
 pydantic
-bson
+pymongo
