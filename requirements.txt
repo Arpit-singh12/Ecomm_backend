@@ -4,4 +4,3 @@ motor
 python-dotenv
 pydantic
 bson
-os
