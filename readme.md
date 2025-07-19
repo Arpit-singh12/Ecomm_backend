@@ -1,7 +1,7 @@
 
 # E-Commerce Backend API
 
-A simple backend system for an e-commerce-like product catalog and order system using **FastAPI** and **MongoDB**.
+A backend system for an e-commerce-like product catalog and order system using **FastAPI** and **MongoDB**.
 
 ---
 
