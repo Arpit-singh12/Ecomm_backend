@@ -104,8 +104,7 @@ ecommerce_app/
 ---
 
 #### List Products
-
-- **Endpoint**: `GET /products`
+- **Endpoint**: `GET /products?name=<Product_name>&size=<Size>&limit=5&offset=0`
 - **Query Parameters**:
   - `name`: partial search
   - `size`: filter by size
@@ -167,6 +166,51 @@ ecommerce_app/
 ```
 
 - **Status**: `201 Created`
+
+---
+
+#### List of Orders
+
+- **Endpoint**: `GET /orders/<user_id>?limit=2&offset=0`
+- **Query Parameters**:
+  - `limit`: number of documents to return
+  - `offset`: pagination skip
+
+- **Response**:
+
+```json
+{
+    "data": [
+        {
+            "_id": "687b1fe8a426ec801fb898d9",
+            "items": [
+                {
+                    "productDetails": {
+                        "name": "Denim",
+                        "ID": "687af97656fdd012aafe0472"
+                    },
+                    "qty": 2
+                },
+                {
+                    "productDetails": {
+                        "name": "Track-suits",
+                        "ID": "687af98856fdd012aafe0473"
+                    },
+                    "qty": 2
+                }
+            ],
+            "total": 1996.0
+        }
+    ],
+    "page": {
+        "next": 10,
+        "previous": 0,
+        "limit": 10
+    }
+}
+```
+
+- **Status**: `200 OK`
 
 ---
 
