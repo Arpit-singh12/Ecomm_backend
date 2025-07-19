@@ -104,7 +104,7 @@ ecommerce_app/
 ---
 
 #### List Products
-- **Endpoint**: `GET /products?name=<Product_name>&size=<Size>&limit=5&offset=0`
+- **Endpoint**: `GET /products?name=<Product_name>&size=<Size>&limit=4&offset=0`
 - **Query Parameters**:
   - `name`: partial search
   - `size`: filter by size
@@ -115,18 +115,33 @@ ecommerce_app/
 
 ```json
 {
-  "data": [
-    {
-      "id": "123",
-      "name": "Shirt",
-      "price": 100.0
+    "data": [
+        {
+            "id": "687af91556fdd012aafe0470",
+            "name": "T-Shirt",
+            "price": 499.99
+        },
+        {
+            "id": "687af96656fdd012aafe0471",
+            "name": "Pants",
+            "price": 499.99
+        },
+        {
+            "id": "687af97656fdd012aafe0472",
+            "name": "Denim",
+            "price": 499.99
+        },
+        {
+            "id": "687af98856fdd012aafe0473",
+            "name": "Track-suits",
+            "price": 499.99
+        }
+    ],
+    "page": {
+        "next": 10,
+        "previous": 0,
+        "limit": 4
     }
-  ],
-  "page": {
-    "next": "10",
-    "limit": 10,
-    "previous": 0
-  }
 }
 ```
 
