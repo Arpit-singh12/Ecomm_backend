@@ -56,7 +56,14 @@ async def list_orders(
                             "qty": "$items.qty"
                         }
                     },
-                    "total": {"$first": "$total"}
+                    "total": {
+                        "$sum": {
+                            "$multiply": [
+                                {"$ifNull": ["$product_details.price", 0]},
+                                {"$ifNull": ["$items.qty", 0]}
+                            ]
+                        }
+                    }
                 }
             },
             {"$skip": offset},
